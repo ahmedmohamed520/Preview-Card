@@ -1,0 +1,148 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: "Outfit", sans-serif;
+    font-size: 1.8rem;
+    width: 100vw;
+    background-color: hsl(217, 54%, 11%);
+}
+a,
+li {
+    display: inline-block;
+}
+
+.card {
+    width: 22vw;
+    /* height: 80vh; */
+    margin: 0 auto;
+    position: relative;
+    top: 50vh;
+    transform: translateY(-50%);
+    background-color: hsl(216, 50%, 16%);
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 20px;
+}
+
+@media screen and (max-width: 1270px) {
+    .card {
+        width: 28vw;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .card {
+        width: 35vw;
+    }
+}
+@media screen and (max-width: 769px) {
+    .card {
+        width: 40vw;
+    }
+}
+@media screen and (max-width: 560px) {
+    .card {
+        width: 60vw;
+    }
+}
+.card-img-link:link,
+.card-img-link:visited {
+    display: block;
+    position: relative;
+    margin-bottom: 16px;
+    border-radius: 7px;
+}
+.card-img-link:link::after,
+.card-img-link:visited::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background-position: center;
+    background-image: url("/images/icon-view.svg"),
+        linear-gradient(rgb(0, 255, 247, 0.5), rgb(0, 255, 247, 0.5));
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: 0.3s all;
+}
+.card-img-link:hover::after,
+.card-img-link:active::after {
+    opacity: 1;
+}
+.card-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 7px;
+    position: relative;
+    /* height: 100%; */
+    /* object-fit: cover; */
+}
+/* .card-img:hover {
+    background-image: linear-gradient(hsl(178, 100%, 50%), hsl(178, 100%, 50%));
+} */
+.card-title {
+    color: #fff;
+    margin-bottom: 16px;
+}
+.card-text {
+    color: hsl(216, 20%, 63%);
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.card-info {
+    display: flex;
+    justify-content: space-between;
+}
+.card-info > * {
+    display: flex;
+    align-items: center;
+}
+.card-info p {
+    margin-left: 5px;
+    margin-bottom: 0;
+}
+
+.erherneum {
+    color: hsl(178, 100%, 50%);
+}
+
+.card-footer {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid hsl(215, 32%, 27%);
+    padding: 15px 0 8px;
+    color: hsl(216, 20%, 63%);
+    margin-top: 18px;
+}
+.card-author {
+    border: 1px solid #fff;
+    border-radius: 50%;
+    margin-right: 16px;
+}
+.author-name:link,
+.author-name:visited {
+    text-decoration: none;
+    color: #fff;
+    transition: 0.3s color ease-in;
+}
+.author-name:hover,
+.author-name:active {
+    color: hsl(178, 100%, 50%);
+}
+.mr-5 {
+    display: inline-block;
+    margin-right: 5px;
+}
